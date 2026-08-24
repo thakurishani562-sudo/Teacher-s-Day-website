@@ -1,9 +1,9 @@
 import React from 'react';
-import { LayoutDashboard, GraduationCap, History, ShieldCheck, Plus, RefreshCw, FileSpreadsheet } from 'lucide-react';
+import { LayoutDashboard, History, ShieldCheck, Plus, RefreshCw, FileSpreadsheet } from 'lucide-react';
 
 interface SidebarProps {
-  activeTab: 'dashboard' | 'teachers' | 'history' | 'transparency';
-  setActiveTab: (tab: 'dashboard' | 'teachers' | 'history' | 'transparency') => void;
+  activeTab: 'dashboard' | 'history' | 'transparency';
+  setActiveTab: (tab: 'dashboard' | 'history' | 'transparency') => void;
   onOpenAddModal: () => void;
   onRefresh: () => void;
   isRefreshing: boolean;
@@ -20,7 +20,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
 }) => {
   const menuItems = [
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-    { id: 'teachers', label: 'Teachers', icon: GraduationCap },
     { id: 'history', label: 'History', icon: History },
     { id: 'transparency', label: 'Transparency', icon: ShieldCheck },
   ] as const;

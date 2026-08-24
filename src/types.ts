@@ -33,30 +33,6 @@ export interface CollectionSummary {
   lastUpdated: string;
 }
 
-export interface TeacherProfile {
-  id: string;
-  name: string;
-  designation: string;
-  subject: string;
-  quote: string;
-  appreciationNote: string;
-  avatarColor: string;
-  initials: string;
-  yearsOfTeaching: number;
-  specialty: string;
-}
-
-export interface GratitudeNote {
-  id: string;
-  studentName: string;
-  rollNo?: string;
-  teacherName: string;
-  message: string;
-  tag: string;
-  likes: number;
-  timestamp: string;
-}
-
 export interface TransparencyExpense {
   category: string;
   description: string;

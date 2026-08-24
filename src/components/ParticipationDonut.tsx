@@ -10,8 +10,8 @@ export const ParticipationDonut: React.FC<ParticipationDonutProps> = ({
   totalCount,
 }) => {
   // If count is available from sheet, calculate percentage
-  const actualTotal = totalCount || 128;
-  const percentage = Math.min(100, Math.round((contributedCount / actualTotal) * 100)) || 81;
+  const actualTotal = totalCount || 50;
+  const percentage = Math.min(100, Math.round((contributedCount / actualTotal) * 100));
 
   // SVG Circle calculations
   const radius = 15.9155;

@@ -129,8 +129,8 @@ export function parseGoogleSheetCsv(csvText: string): CollectionSummary {
 
   // Calculate statistics
   const totalAmount = items.reduce((sum, item) => sum + item.amount, 0);
-  const goalAmount = 25000;
-  const totalStudents = 128;
+  const goalAmount = 5000;
+  const totalStudents = 50;
   const totalStudentsContributed = items.length;
   const percentage = Math.min(100, Math.round((totalAmount / goalAmount) * 100));
 

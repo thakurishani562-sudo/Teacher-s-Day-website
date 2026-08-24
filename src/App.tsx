@@ -8,9 +8,7 @@ import { CollectorCards } from './components/CollectorCards';
 import { CollectiveProgress } from './components/CollectiveProgress';
 import { RecentContributions } from './components/RecentContributions';
 import { ParticipationDonut } from './components/ParticipationDonut';
-import { AppreciationCards } from './components/AppreciationCards';
 import { HistoryView } from './components/HistoryView';
-import { TeachersView } from './components/TeachersView';
 import { TransparencyView } from './components/TransparencyView';
 import { Footer } from './components/Footer';
 import { MobileBottomNav } from './components/MobileBottomNav';
@@ -19,7 +17,7 @@ import { fetchGoogleSheetData, parseGoogleSheetCsv, FALLBACK_CSV } from './utils
 import { CollectionSummary } from './types';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'dashboard' | 'teachers' | 'history' | 'transparency'>('dashboard');
+  const [activeTab, setActiveTab] = useState<'dashboard' | 'history' | 'transparency'>('dashboard');
   const [summary, setSummary] = useState<CollectionSummary>(() => parseGoogleSheetCsv(FALLBACK_CSV));
   const [isRefreshing, setIsRefreshing] = useState<boolean>(false);
   const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
@@ -125,16 +123,6 @@ export default function App() {
                     <HeartHandshake className="w-5 h-5 opacity-80" />
                   </button>
                 </section>
-
-                {/* Appreciation & Reflections Section */}
-                <AppreciationCards />
-              </div>
-            )}
-
-            {/* Tab: Teachers */}
-            {activeTab === 'teachers' && (
-              <div className="animate-in fade-in duration-300">
-                <TeachersView />
               </div>
             )}
 

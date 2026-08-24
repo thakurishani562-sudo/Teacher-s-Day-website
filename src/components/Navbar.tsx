@@ -3,7 +3,7 @@ import { Heart, Bell, RefreshCw, Menu, X, CheckCircle2, Sparkles } from 'lucide-
 
 interface NavbarProps {
   activeTab: string;
-  setActiveTab: (tab: 'dashboard' | 'teachers' | 'history' | 'transparency') => void;
+  setActiveTab: (tab: 'dashboard' | 'history' | 'transparency') => void;
   onOpenAddModal: () => void;
   onRefresh: () => void;
   isRefreshing: boolean;
@@ -25,7 +25,6 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   const navLinks = [
     { id: 'dashboard', label: 'Dashboard' },
-    { id: 'teachers', label: 'Teachers' },
     { id: 'history', label: 'History' },
     { id: 'transparency', label: 'Transparency' },
   ] as const;

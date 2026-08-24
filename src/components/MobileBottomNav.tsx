@@ -1,15 +1,14 @@
 import React from 'react';
-import { LayoutDashboard, GraduationCap, History, ShieldCheck } from 'lucide-react';
+import { LayoutDashboard, History, ShieldCheck } from 'lucide-react';
 
 interface MobileBottomNavProps {
-  activeTab: 'dashboard' | 'teachers' | 'history' | 'transparency';
-  setActiveTab: (tab: 'dashboard' | 'teachers' | 'history' | 'transparency') => void;
+  activeTab: 'dashboard' | 'history' | 'transparency';
+  setActiveTab: (tab: 'dashboard' | 'history' | 'transparency') => void;
 }
 
 export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ activeTab, setActiveTab }) => {
   const tabs = [
     { id: 'dashboard', label: 'Home', icon: LayoutDashboard },
-    { id: 'teachers', label: 'Teachers', icon: GraduationCap },
     { id: 'history', label: 'Ledger', icon: History },
     { id: 'transparency', label: 'Audit', icon: ShieldCheck },
   ] as const;
