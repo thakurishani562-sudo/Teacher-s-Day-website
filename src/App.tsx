@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { PlusCircle, HeartHandshake } from 'lucide-react';
 import { BackgroundCanvas } from './components/BackgroundCanvas';
 import { Navbar } from './components/Navbar';
 import { Sidebar } from './components/Sidebar';
@@ -8,19 +7,17 @@ import { CollectorCards } from './components/CollectorCards';
 import { CollectiveProgress } from './components/CollectiveProgress';
 import { RecentContributions } from './components/RecentContributions';
 import { ParticipationDonut } from './components/ParticipationDonut';
+import { AppreciationCards } from './components/AppreciationCards';
 import { HistoryView } from './components/HistoryView';
-import { TransparencyView } from './components/TransparencyView';
 import { Footer } from './components/Footer';
 import { MobileBottomNav } from './components/MobileBottomNav';
-import { AddContributionModal } from './components/AddContributionModal';
 import { fetchGoogleSheetData, parseGoogleSheetCsv, FALLBACK_CSV } from './utils/csvParser';
 import { CollectionSummary } from './types';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'dashboard' | 'history' | 'transparency'>('dashboard');
+  const [activeTab, setActiveTab] = useState<'dashboard' | 'history'>('dashboard');
   const [summary, setSummary] = useState<CollectionSummary>(() => parseGoogleSheetCsv(FALLBACK_CSV));
   const [isRefreshing, setIsRefreshing] = useState<boolean>(false);
-  const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
 
   // Load data from Google Sheet
   const loadData = useCallback(async () => {
@@ -55,7 +52,6 @@ export default function App() {
       <Navbar
         activeTab={activeTab}
         setActiveTab={setActiveTab}
-        onOpenAddModal={() => setIsAddModalOpen(true)}
         onRefresh={loadData}
         isRefreshing={isRefreshing}
         lastUpdated={summary.lastUpdated}
@@ -68,7 +64,6 @@ export default function App() {
         <Sidebar
           activeTab={activeTab}
           setActiveTab={setActiveTab}
-          onOpenAddModal={() => setIsAddModalOpen(true)}
           onRefresh={loadData}
           isRefreshing={isRefreshing}
           totalCollected={summary.totalAmount}
@@ -83,7 +78,7 @@ export default function App() {
                 {/* Hero section */}
                 <HeroSection />
 
-                {/* Aastha & Parash Collection Cards */}
+                {/* Coordinator Collection Cards */}
                 <CollectorCards receivers={summary.receivers} />
 
                 {/* Progress bar and metrics */}
@@ -112,17 +107,8 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Big Action CTA Section */}
-                <section className="flex justify-center py-6">
-                  <button
-                    onClick={() => setIsAddModalOpen(true)}
-                    className="bg-[#4A6545] hover:bg-[#954459] text-white font-semibold py-4 md:py-5 px-8 md:px-12 rounded-2xl shadow-[0_8px_24px_rgba(74,101,69,0.25)] hover:shadow-[0_8px_28px_rgba(149,68,89,0.3)] transition-all duration-300 flex items-center gap-3 text-base md:text-lg group hover:-translate-y-1 cursor-pointer"
-                  >
-                    <PlusCircle className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" />
-                    <span>Add Your Contribution</span>
-                    <HeartHandshake className="w-5 h-5 opacity-80" />
-                  </button>
-                </section>
+                {/* Appreciation & Reflections Section */}
+                <AppreciationCards />
               </div>
             )}
 
@@ -133,17 +119,6 @@ export default function App() {
                   items={summary.items}
                   onRefresh={loadData}
                   isRefreshing={isRefreshing}
-                  onOpenAddModal={() => setIsAddModalOpen(true)}
-                />
-              </div>
-            )}
-
-            {/* Tab: Transparency */}
-            {activeTab === 'transparency' && (
-              <div className="animate-in fade-in duration-300">
-                <TransparencyView
-                  totalCollected={summary.totalAmount}
-                  goalAmount={summary.goalAmount}
                 />
               </div>
             )}
@@ -156,12 +131,6 @@ export default function App() {
 
       {/* Mobile Bottom Navigation */}
       <MobileBottomNav activeTab={activeTab} setActiveTab={setActiveTab} />
-
-      {/* Add Contribution Interactive Modal */}
-      <AddContributionModal
-        isOpen={isAddModalOpen}
-        onClose={() => setIsAddModalOpen(false)}
-      />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 {
   "name": "Teacher's Day Contribution Tracker",
-  "description": "Real-time Teacher's Day contribution tracker for IT Dept 2026 synced live with Google Sheets, featuring collection stats, ledger history, teacher honors, and transparency reports.",
+  "description": "Real-time Teacher's Day contribution tracker for ME Dept 2026 synced live with Google Sheets, featuring collection stats, ledger history, teacher honors, and transparency reports.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

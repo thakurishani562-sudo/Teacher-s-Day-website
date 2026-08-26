@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Heart, Bell, RefreshCw, Menu, X, CheckCircle2, Sparkles } from 'lucide-react';
 
 interface NavbarProps {
   activeTab: string;
   setActiveTab: (tab: 'dashboard' | 'history' | 'transparency') => void;
   onOpenAddModal: () => void;
+=======
+import { RefreshCw, Menu, X } from 'lucide-react';
+
+interface NavbarProps {
+  activeTab: string;
+  setActiveTab: (tab: 'dashboard' | 'history') => void;
+>>>>>>> 3868df1 (Update website and add flower favicon)
   onRefresh: () => void;
   isRefreshing: boolean;
   lastUpdated: string;
@@ -14,19 +22,29 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({
   activeTab,
   setActiveTab,
+<<<<<<< HEAD
   onOpenAddModal,
+=======
+>>>>>>> 3868df1 (Update website and add flower favicon)
   onRefresh,
   isRefreshing,
   lastUpdated,
   totalContributors,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+<<<<<<< HEAD
   const [showNotifications, setShowNotifications] = useState(false);
 
   const navLinks = [
     { id: 'dashboard', label: 'Dashboard' },
     { id: 'history', label: 'History' },
     { id: 'transparency', label: 'Transparency' },
+=======
+
+  const navLinks = [
+    { id: 'dashboard', label: 'Dashboard' },
+    { id: 'history', label: 'Contribution' },
+>>>>>>> 3868df1 (Update website and add flower favicon)
   ] as const;
 
   return (
@@ -46,7 +64,11 @@ export const Navbar: React.FC<NavbarProps> = ({
           className="cursor-pointer flex items-center gap-2"
         >
           <span className="font-['Playfair_Display'] text-xl md:text-2xl font-bold text-[#954459] tracking-tight">
+<<<<<<< HEAD
             IT Branch Honors
+=======
+            ME Branch Honors
+>>>>>>> 3868df1 (Update website and add flower favicon)
           </span>
           <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] uppercase font-bold tracking-widest bg-[#C9E8BF]/50 text-[#4F6A49] rounded-full border border-[#A8C69F]/40">
             2026
@@ -90,6 +112,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </button>
 
         {/* Quick Add CTA */}
+<<<<<<< HEAD
         <button
           onClick={onOpenAddModal}
           className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 bg-[#4A6545] hover:bg-[#954459] text-white text-xs font-semibold rounded-lg shadow-sm transition-all"
@@ -140,6 +163,13 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Student Avatar */}
         <div className="w-8 h-8 rounded-full bg-[#EAE1D7] overflow-hidden border border-[#D9C1C4]/50 flex items-center justify-center text-xs font-bold text-[#954459]">
           IT
+=======
+        <div></div>
+
+        {/* Student Avatar */}
+        <div className="w-8 h-8 rounded-full bg-[#EAE1D7] overflow-hidden border border-[#D9C1C4]/50 flex items-center justify-center text-xs font-bold text-[#954459]">
+          ME
+>>>>>>> 3868df1 (Update website and add flower favicon)
         </div>
       </div>
 
@@ -165,6 +195,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="pt-2 border-t border-[#EAE1D7] flex gap-2">
             <button
               onClick={() => {
+<<<<<<< HEAD
                 onOpenAddModal();
                 setMobileMenuOpen(false);
               }}
@@ -178,6 +209,12 @@ export const Navbar: React.FC<NavbarProps> = ({
                 setMobileMenuOpen(false);
               }}
               className="px-3 py-2.5 bg-[#F6ECE3] text-[#954459] text-xs font-medium rounded-lg flex items-center justify-center gap-1"
+=======
+                onRefresh();
+                setMobileMenuOpen(false);
+              }}
+              className="flex-1 px-3 py-2.5 bg-[#F6ECE3] text-[#954459] text-xs font-medium rounded-lg flex items-center justify-center gap-1"
+>>>>>>> 3868df1 (Update website and add flower favicon)
             >
               <RefreshCw className="w-3.5 h-3.5" />
               Sync

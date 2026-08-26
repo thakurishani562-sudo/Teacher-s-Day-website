@@ -1,10 +1,18 @@
 import React from 'react';
+<<<<<<< HEAD
 import { LayoutDashboard, History, ShieldCheck, Plus, RefreshCw, FileSpreadsheet } from 'lucide-react';
 
 interface SidebarProps {
   activeTab: 'dashboard' | 'history' | 'transparency';
   setActiveTab: (tab: 'dashboard' | 'history' | 'transparency') => void;
   onOpenAddModal: () => void;
+=======
+import { LayoutDashboard, History, RefreshCw, FileSpreadsheet } from 'lucide-react';
+
+interface SidebarProps {
+  activeTab: 'dashboard' | 'history';
+  setActiveTab: (tab: 'dashboard' | 'history') => void;
+>>>>>>> 3868df1 (Update website and add flower favicon)
   onRefresh: () => void;
   isRefreshing: boolean;
   totalCollected: number;
@@ -13,15 +21,22 @@ interface SidebarProps {
 export const Sidebar: React.FC<SidebarProps> = ({
   activeTab,
   setActiveTab,
+<<<<<<< HEAD
   onOpenAddModal,
+=======
+>>>>>>> 3868df1 (Update website and add flower favicon)
   onRefresh,
   isRefreshing,
   totalCollected,
 }) => {
   const menuItems = [
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
+<<<<<<< HEAD
     { id: 'history', label: 'History', icon: History },
     { id: 'transparency', label: 'Transparency', icon: ShieldCheck },
+=======
+    { id: 'history', label: 'Contribution', icon: History },
+>>>>>>> 3868df1 (Update website and add flower favicon)
   ] as const;
 
   return (
@@ -33,12 +48,20 @@ export const Sidebar: React.FC<SidebarProps> = ({
       <div className="mb-6 flex items-center gap-3">
         <div className="w-12 h-12 rounded-full overflow-hidden bg-gradient-to-br from-[#FFD9DF] to-[#C9E8BF] p-0.5 border border-[#D9C1C4]/40 flex items-center justify-center shadow-sm">
           <div className="w-full h-full rounded-full bg-[#FFF8F3] flex items-center justify-center">
+<<<<<<< HEAD
             <span className="font-['Playfair_Display'] font-bold text-sm text-[#954459]">IT</span>
+=======
+            <span className="font-['Playfair_Display'] font-bold text-sm text-[#954459]">ME</span>
+>>>>>>> 3868df1 (Update website and add flower favicon)
           </div>
         </div>
         <div>
           <h2 className="font-['Playfair_Display'] text-base font-bold text-[#954459] leading-tight">
+<<<<<<< HEAD
             IT Dept 2026
+=======
+            ME Dept 2026
+>>>>>>> 3868df1 (Update website and add flower favicon)
           </h2>
           <p className="font-sans text-xs text-[#534245]">Teacher's Day Fund</p>
         </div>
@@ -67,6 +90,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
       </nav>
 
       {/* Quick Add Contribution Button */}
+<<<<<<< HEAD
       <button
         onClick={onOpenAddModal}
         className="w-full py-3 px-4 rounded-xl bg-[#F6ECE3] text-[#954459] font-semibold hover:bg-[#FFD9DF]/60 transition-all flex items-center justify-center gap-2 border border-[#D9C1C4]/50 shadow-sm hover:shadow"
@@ -74,6 +98,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
         <Plus className="w-4 h-4 text-[#954459]" />
         <span>Add Contribution</span>
       </button>
+=======
+      <div></div>
+>>>>>>> 3868df1 (Update website and add flower favicon)
 
       {/* Google Sheet Live Source Box */}
       <div className="pt-4 border-t border-[#D9C1C4]/30 space-y-2">

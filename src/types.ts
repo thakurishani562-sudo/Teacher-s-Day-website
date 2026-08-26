@@ -33,6 +33,33 @@ export interface CollectionSummary {
   lastUpdated: string;
 }
 
+<<<<<<< HEAD
+=======
+export interface TeacherProfile {
+  id: string;
+  name: string;
+  designation: string;
+  subject: string;
+  quote: string;
+  appreciationNote: string;
+  avatarColor: string;
+  initials: string;
+  yearsOfTeaching: number;
+  specialty: string;
+}
+
+export interface GratitudeNote {
+  id: string;
+  studentName: string;
+  rollNo?: string;
+  teacherName: string;
+  message: string;
+  tag: string;
+  likes: number;
+  timestamp: string;
+}
+
+>>>>>>> 3868df1 (Update website and add flower favicon)
 export interface TransparencyExpense {
   category: string;
   description: string;

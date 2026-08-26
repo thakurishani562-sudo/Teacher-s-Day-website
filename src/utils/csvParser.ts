@@ -9,16 +9,16 @@ export const FALLBACK_CSV = `,,,,Teacher's Day Contribution        ,,,
 ,,,,,,,
 S.NO.,NAME ,ROLL NO.,Branch\t,Year\t,DATE OF PAYMENT,AMOUNT ,Receiver
 ,,,,,,,
-1,AASTHA KASHYAP,2511101,IT,1ST,19-08-2026,100,Aastha 
-2,ASTHA GUPTA,2511109,IT,1ST,19-08-2026,100,Aastha
-3,AVINASH KUMAR,2511110,IT,1ST,19-08-2027,100,Parash
-4,ISHANI THAKUR,2511118,IT,1ST,22-08-2026,100,Aastha
-5,KHUSHI SINGH,2511121,IT,1ST,22-08-2026,100,Aastha
-6,PALLAVEE,2511131,IT,1ST,19-08-2026,100,Aastha
-7,PARASH KUMAR,2511132,IT,1ST,19-08-2027,100,Parash 
-8,SANCHITA MUKHERJEE,2511139,IT,1ST,22-08-2026,100,Aastha
-9,SNEHA KUMARI,2511146,IT,1ST,23-08-2026,100,Aastha
-10,HAPPY KUMAR,2511115,IT,1ST,24-08-2026,100,Parash
+1,AASTHA KASHYAP,2511101,ME,1ST,19-08-2026,100,Kaya 
+2,ASTHA GUPTA,2511109,ME,1ST,19-08-2026,100,Kaya
+3,AVINASH KUMAR,2511110,ME,1ST,19-08-2027,100,Ankit
+4,ISHANI THAKUR,2511118,ME,1ST,22-08-2026,100,Kaya
+5,KHUSHI SINGH,2511121,ME,1ST,22-08-2026,100,Kaya
+6,PALLAVEE,2511131,ME,1ST,19-08-2026,100,Kaya
+7,PARASH KUMAR,2511132,ME,1ST,19-08-2027,100,Ankit 
+8,SANCHITA MUKHERJEE,2511139,ME,1ST,22-08-2026,100,Kaya
+9,SNEHA KUMARI,2511146,ME,1ST,23-08-2026,100,Kaya
+10,HAPPY KUMAR,2511115,ME,1ST,24-08-2026,100,Ankit
 ,,,,,,1000,`;
 
 /**
@@ -113,24 +113,24 @@ export function parseGoogleSheetCsv(csvText: string): CollectionSummary {
     if (amount <= 0 && !rawName) continue;
 
     const sNo = parseInt(rawSNo.replace(/[^0-9]/g, '')) || items.length + 1;
-    const receiver = (cols[receiverIdx] || 'Aastha').trim();
+    const receiver = (cols[receiverIdx] || 'Kaya').trim();
 
     items.push({
       sNo,
       name: rawName.trim(),
       rollNo: (cols[rollIdx] || '').trim(),
-      branch: (cols[branchIdx] || 'IT').replace(/\t/g, '').trim(),
+      branch: (cols[branchIdx] || 'ME').replace(/\t/g, '').trim(),
       year: (cols[yearIdx] || '1ST').replace(/\t/g, '').trim(),
       dateOfPayment: (cols[dateIdx] || '').trim(),
       amount,
-      receiver: receiver || 'Aastha',
+      receiver: receiver || 'Kaya',
     });
   }
 
   // Calculate statistics
   const totalAmount = items.reduce((sum, item) => sum + item.amount, 0);
-  const goalAmount = 5000;
-  const totalStudents = 50;
+  const goalAmount = 5600;
+  const totalStudents = 56;
   const totalStudentsContributed = items.length;
   const percentage = Math.min(100, Math.round((totalAmount / goalAmount) * 100));
 
@@ -139,31 +139,31 @@ export function parseGoogleSheetCsv(csvText: string): CollectionSummary {
 
   // Receivers breakdown
   const receivers: Record<string, ReceiverSummary> = {
-    Aastha: {
-      name: "Aastha's Collection",
-      roleDescription: 'Coordinating contributions from Section A',
+    Kaya: {
+      name: "Kaya's Collection",
+      roleDescription: 'Coordinating contributions',
       total: 0,
       today: 0,
       count: 0,
-      section: 'Section A',
+      section: 'Coordinator',
       icon: 'favorite',
     },
-    Parash: {
-      name: "Parash's Collection",
-      roleDescription: 'Leading the outreach for Section B',
+    Ankit: {
+      name: "Ankit's Collection",
+      roleDescription: 'Leading the outreach',
       total: 0,
       today: 0,
       count: 0,
-      section: 'Section B',
+      section: 'Coordinator',
       icon: 'local_florist',
     },
   };
 
   items.forEach((item) => {
-    const recKey = item.receiver.toLowerCase().includes('parash')
-      ? 'Parash'
-      : item.receiver.toLowerCase().includes('aastha')
-      ? 'Aastha'
+    const recKey = item.receiver.toLowerCase().includes('ankit')
+      ? 'Ankit'
+      : item.receiver.toLowerCase().includes('kaya')
+      ? 'Kaya'
       : item.receiver;
 
     if (!receivers[recKey]) {

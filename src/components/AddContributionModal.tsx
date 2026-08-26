@@ -14,9 +14,15 @@ export const AddContributionModal: React.FC<AddContributionModalProps> = ({ isOp
   const [formData, setFormData] = useState({
     name: '',
     rollNo: '',
+<<<<<<< HEAD
     section: 'Section A',
     amount: '100',
     receiver: 'Aastha Kashyap',
+=======
+    section: 'Coordinator',
+    amount: '100',
+    receiver: 'Kaya',
+>>>>>>> 3868df1 (Update website and add flower favicon)
     transactionId: '',
   });
 
@@ -149,15 +155,25 @@ export const AddContributionModal: React.FC<AddContributionModalProps> = ({ isOp
               {/* Coordinator Contacts */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs pt-1">
                 <div className="p-2.5 bg-white/70 rounded-xl border border-[#D9C1C4]/40">
+<<<<<<< HEAD
                   <p className="font-bold text-[#954459]">Aastha Kashyap</p>
                   <p className="text-[10px] text-[#867275]">Section A Coordinator</p>
+=======
+                  <p className="font-bold text-[#954459]">Kaya</p>
+                  <p className="text-[10px] text-[#867275]">Coordinator</p>
+>>>>>>> 3868df1 (Update website and add flower favicon)
                   <p className="text-[11px] font-mono text-[#4A6545] mt-1 flex items-center gap-1">
                     <Phone className="w-3 h-3" /> +91 98765 43210
                   </p>
                 </div>
                 <div className="p-2.5 bg-white/70 rounded-xl border border-[#D9C1C4]/40">
+<<<<<<< HEAD
                   <p className="font-bold text-[#954459]">Parash Kumar</p>
                   <p className="text-[10px] text-[#867275]">Section B Coordinator</p>
+=======
+                  <p className="font-bold text-[#954459]">Ankit</p>
+                  <p className="text-[10px] text-[#867275]">Coordinator</p>
+>>>>>>> 3868df1 (Update website and add flower favicon)
                   <p className="text-[11px] font-mono text-[#4A6545] mt-1 flex items-center gap-1">
                     <Phone className="w-3 h-3" /> +91 91234 56789
                   </p>
@@ -225,8 +241,12 @@ export const AddContributionModal: React.FC<AddContributionModalProps> = ({ isOp
                     onChange={(e) => setFormData({ ...formData, section: e.target.value })}
                     className="w-full text-xs p-2.5 bg-white rounded-xl border border-[#D9C1C4] focus:outline-none focus:border-[#954459]"
                   >
+<<<<<<< HEAD
                     <option value="Section A">Section A</option>
                     <option value="Section B">Section B</option>
+=======
+                  <option value="Coordinator">Coordinator</option>
+>>>>>>> 3868df1 (Update website and add flower favicon)
                   </select>
                 </div>
 
@@ -239,8 +259,13 @@ export const AddContributionModal: React.FC<AddContributionModalProps> = ({ isOp
                     onChange={(e) => setFormData({ ...formData, receiver: e.target.value })}
                     className="w-full text-xs p-2.5 bg-white rounded-xl border border-[#D9C1C4] focus:outline-none focus:border-[#954459]"
                   >
+<<<<<<< HEAD
                     <option value="Aastha Kashyap">Aastha Kashyap</option>
                     <option value="Parash Kumar">Parash Kumar</option>
+=======
+                  <option value="Kaya">Kaya</option>
+                  <option value="Ankit">Ankit</option>
+>>>>>>> 3868df1 (Update website and add flower favicon)
                   </select>
                 </div>
               </div>

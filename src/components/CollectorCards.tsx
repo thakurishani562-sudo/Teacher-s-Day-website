@@ -8,6 +8,7 @@ interface CollectorCardsProps {
 
 export const CollectorCards: React.FC<CollectorCardsProps> = ({ receivers }) => {
   // Ensure default receivers exist or fallback
+<<<<<<< HEAD
   const aastha = receivers['Aastha'] || {
     name: "Aastha's Collection",
     roleDescription: 'Coordinating contributions from Section A',
@@ -25,15 +26,42 @@ export const CollectorCards: React.FC<CollectorCardsProps> = ({ receivers }) => 
     today: 0,
     count: 0,
     section: 'Section B',
+=======
+  const aastha = receivers['Kaya'] || {
+    name: "Kaya's Collection",
+    roleDescription: 'Coordinating contributions',
+    total: 0,
+    today: 0,
+    count: 0,
+    section: 'Coordinator',
+    icon: 'favorite',
+  };
+
+  const parash = receivers['Ankit'] || {
+    name: "Ankit's Collection",
+    roleDescription: 'Leading the outreach',
+    total: 0,
+    today: 0,
+    count: 0,
+    section: 'Coordinator',
+>>>>>>> 3868df1 (Update website and add flower favicon)
     icon: 'local_florist',
   };
 
   // Other receivers if any exist in the sheet
+<<<<<<< HEAD
   const otherKeys = Object.keys(receivers).filter((k) => k !== 'Aastha' && k !== 'Parash');
 
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
       {/* Aastha's Card */}
+=======
+  const otherKeys = Object.keys(receivers).filter((k) => k !== 'Kaya' && k !== 'Ankit');
+
+  return (
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+      {/* Kaya's Card */}
+>>>>>>> 3868df1 (Update website and add flower favicon)
       <div className="bg-[#FCE4EC]/90 backdrop-blur-md rounded-2xl p-7 border border-[#D9C1C4]/40 flex flex-col justify-between relative overflow-hidden shadow-[0px_8px_24px_rgba(149,68,89,0.06)] hover:-translate-y-1 transition-all duration-300 group">
         {/* Background icon watermark */}
         <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-15 transition-opacity text-[#954459] pointer-events-none">
@@ -76,7 +104,11 @@ export const CollectorCards: React.FC<CollectorCardsProps> = ({ receivers }) => 
         </p>
       </div>
 
+<<<<<<< HEAD
       {/* Parash's Card */}
+=======
+      {/* Ankit's Card */}
+>>>>>>> 3868df1 (Update website and add flower favicon)
       <div className="bg-[#FCE4EC]/90 backdrop-blur-md rounded-2xl p-7 border border-[#D9C1C4]/40 flex flex-col justify-between relative overflow-hidden shadow-[0px_8px_24px_rgba(149,68,89,0.06)] hover:-translate-y-1 transition-all duration-300 group">
         {/* Background icon watermark */}
         <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-15 transition-opacity text-[#4A6545] pointer-events-none">

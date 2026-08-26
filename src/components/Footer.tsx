@@ -1,12 +1,18 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { ShieldCheck, Mail, X } from 'lucide-react';
 import { GitHubOfficialLogo, LinkedInOfficialLogo } from './OfficialLogos';
+=======
+import React from 'react';
+import { GitHubOfficialLogo } from './OfficialLogos';
+>>>>>>> 3868df1 (Update website and add flower favicon)
 
 interface FooterProps {
   lastUpdated: string;
 }
 
 export const Footer: React.FC<FooterProps> = ({ lastUpdated }) => {
+<<<<<<< HEAD
   const [modalType, setModalType] = useState<'terms' | 'privacy' | null>(null);
 
   return (
@@ -32,6 +38,11 @@ export const Footer: React.FC<FooterProps> = ({ lastUpdated }) => {
 
       {/* Bottom row: Credits, Official Social Logos & Policy Links */}
       <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center mt-10 pt-6 border-t border-[#D9C1C4]/30 text-xs">
+=======
+  return (
+    <footer className="w-full py-12 px-4 md:px-10 border-t border-[#D9C1C4]/40 mt-auto bg-[#FFF8F3]/95 backdrop-blur-md relative z-20">
+      <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+>>>>>>> 3868df1 (Update website and add flower favicon)
         {/* Creator Credit with Heart */}
         <div className="flex items-center gap-2 text-[#534245]">
           <span>Made with</span>
@@ -41,6 +52,7 @@ export const Footer: React.FC<FooterProps> = ({ lastUpdated }) => {
           <span>by <strong className="text-[#954459] font-semibold">Ishani</strong></span>
         </div>
 
+<<<<<<< HEAD
         {/* Official Social / Contact Logos */}
         <div className="flex items-center gap-5 my-4 md:my-0 text-[#954459]">
           {/* Official GitHub Logo */}
@@ -141,6 +153,24 @@ export const Footer: React.FC<FooterProps> = ({ lastUpdated }) => {
           </div>
         </div>
       )}
+=======
+        {/* GitHub Link */}
+        <a
+          href="https://github.com/thakurishani562-sudo"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Ishani's GitHub Profile"
+          className="text-[#954459] hover:text-[#4A6545] hover:scale-110 transition-all p-1"
+        >
+          <GitHubOfficialLogo className="w-5 h-5 fill-current" />
+        </a>
+
+        {/* Last Updated */}
+        <span className="text-[11px] font-bold text-[#954459]/70 uppercase tracking-widest">
+          Last updated: {lastUpdated || 'Today, 8:42 PM'}
+        </span>
+      </div>
+>>>>>>> 3868df1 (Update website and add flower favicon)
     </footer>
   );
 };

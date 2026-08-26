@@ -1,16 +1,28 @@
 import React from 'react';
+<<<<<<< HEAD
 import { LayoutDashboard, History, ShieldCheck } from 'lucide-react';
 
 interface MobileBottomNavProps {
   activeTab: 'dashboard' | 'history' | 'transparency';
   setActiveTab: (tab: 'dashboard' | 'history' | 'transparency') => void;
+=======
+import { LayoutDashboard, History } from 'lucide-react';
+
+interface MobileBottomNavProps {
+  activeTab: 'dashboard' | 'history';
+  setActiveTab: (tab: 'dashboard' | 'history') => void;
+>>>>>>> 3868df1 (Update website and add flower favicon)
 }
 
 export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ activeTab, setActiveTab }) => {
   const tabs = [
     { id: 'dashboard', label: 'Home', icon: LayoutDashboard },
+<<<<<<< HEAD
     { id: 'history', label: 'Ledger', icon: History },
     { id: 'transparency', label: 'Audit', icon: ShieldCheck },
+=======
+    { id: 'history', label: 'Contribution', icon: History },
+>>>>>>> 3868df1 (Update website and add flower favicon)
   ] as const;
 
   return (
