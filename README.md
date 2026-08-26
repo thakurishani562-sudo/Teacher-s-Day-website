@@ -103,8 +103,7 @@ npm run dev
 
 ## 🌐 Live Website
 
-🔗 "View the Live Website" 
-https://teacher-s-day-website.vercel.app/
+🔗 "View the Live Website"
 
 ---
 
