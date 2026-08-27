@@ -7,7 +7,6 @@ import { CollectorCards } from './components/CollectorCards';
 import { CollectiveProgress } from './components/CollectiveProgress';
 import { RecentContributions } from './components/RecentContributions';
 import { ParticipationDonut } from './components/ParticipationDonut';
-import { AppreciationCards } from './components/AppreciationCards';
 import { HistoryView } from './components/HistoryView';
 import { Footer } from './components/Footer';
 import { MobileBottomNav } from './components/MobileBottomNav';
@@ -107,8 +106,7 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Appreciation & Reflections Section */}
-                <AppreciationCards />
+            
               </div>
             )}
 

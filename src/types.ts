@@ -33,8 +33,6 @@ export interface CollectionSummary {
   lastUpdated: string;
 }
 
-<<<<<<< HEAD
-=======
 export interface TeacherProfile {
   id: string;
   name: string;
@@ -59,7 +57,6 @@ export interface GratitudeNote {
   timestamp: string;
 }
 
->>>>>>> 3868df1 (Update website and add flower favicon)
 export interface TransparencyExpense {
   category: string;
   description: string;

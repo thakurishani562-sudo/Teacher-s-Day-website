@@ -20,11 +20,7 @@ export const HeroSection: React.FC = () => {
 
       {/* Subheading */}
       <p className="font-['Playfair_Display'] text-lg md:text-2xl text-[#534245] font-medium mb-3">
-<<<<<<< HEAD
-        1st Year • Information Technology
-=======
         1st Year • Mechanical Engineering
->>>>>>> 3868df1 (Update website and add flower favicon)
       </p>
 
       {/* Handwritten quote */}

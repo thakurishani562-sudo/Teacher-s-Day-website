@@ -76,11 +76,8 @@ export const CollectiveProgress: React.FC<CollectiveProgressProps> = ({
             {totalStudents}
           </div>
           <div className="text-[11px] font-sans font-bold text-[#954459]/70 uppercase tracking-widest">
-<<<<<<< HEAD
             Total IT Students
-=======
             Total ME Students
->>>>>>> 3868df1 (Update website and add flower favicon)
           </div>
         </div>
 

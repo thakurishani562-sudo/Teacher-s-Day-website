@@ -7,20 +7,14 @@ interface HistoryViewProps {
   items: ContributionItem[];
   onRefresh: () => void;
   isRefreshing: boolean;
-<<<<<<< HEAD
   onOpenAddModal: () => void;
-=======
->>>>>>> 3868df1 (Update website and add flower favicon)
 }
 
 export const HistoryView: React.FC<HistoryViewProps> = ({
   items,
   onRefresh,
   isRefreshing,
-<<<<<<< HEAD
   onOpenAddModal,
-=======
->>>>>>> 3868df1 (Update website and add flower favicon)
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [receiverFilter, setReceiverFilter] = useState<string>('ALL');
@@ -72,11 +66,8 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
     link.setAttribute('href', encodedUri);
-<<<<<<< HEAD
     link.setAttribute('download', `Teachers_Day_IT_Contributions_${new Date().toISOString().slice(0, 10)}.csv`);
-=======
     link.setAttribute('download', `Teachers_Day_ME_Contributions_${new Date().toISOString().slice(0, 10)}.csv`);
->>>>>>> 3868df1 (Update website and add flower favicon)
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -125,7 +116,6 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
             <Download className="w-3.5 h-3.5" />
             <span>Export CSV</span>
           </button>
-<<<<<<< HEAD
 
           <button
             onClick={onOpenAddModal}
@@ -133,8 +123,6 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
           >
             + Add Contribution
           </button>
-=======
->>>>>>> 3868df1 (Update website and add flower favicon)
         </div>
       </div>
 
@@ -187,11 +175,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
           <span className="text-[11px] font-bold text-[#534245] uppercase mr-1 flex items-center gap-1">
             <Filter className="w-3.5 h-3.5 text-[#4A6545]" /> Filter:
           </span>
-<<<<<<< HEAD
-          {(['ALL', 'Aastha', 'Parash'] as const).map((filter) => (
-=======
           {(['ALL', 'Kaya', 'Ankit'] as const).map((filter) => (
->>>>>>> 3868df1 (Update website and add flower favicon)
             <button
               key={filter}
               onClick={() => setReceiverFilter(filter)}
@@ -282,11 +266,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
                     <td className="py-3 px-4 text-center">
                       <span
                         className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold ${
-<<<<<<< HEAD
-                          item.receiver.toLowerCase().includes('parash')
-=======
                           item.receiver.toLowerCase().includes('ankit')
->>>>>>> 3868df1 (Update website and add flower favicon)
                             ? 'bg-[#C9E8BF]/60 text-[#334D2F] border border-[#A8C69F]/40'
                             : 'bg-[#FFD9DF]/60 text-[#954459] border border-[#FFB1C1]/40'
                         }`}

@@ -114,7 +114,6 @@ export const TransparencyView: React.FC<TransparencyViewProps> = ({ totalCollect
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-[#954459]/15">
           <div className="p-3 bg-white/80 rounded-xl border border-[#D9C1C4]/40">
-<<<<<<< HEAD
             <p className="font-['Caveat'] text-2xl text-[#954459]">Aastha Kashyap</p>
             <p className="text-xs font-semibold text-[#1F1B15]">Student Coordinator (Section A)</p>
             <p className="text-[11px] text-[#867275]">IT 1st Year • Roll: 2511101</p>
@@ -124,7 +123,6 @@ export const TransparencyView: React.FC<TransparencyViewProps> = ({ totalCollect
             <p className="font-['Caveat'] text-2xl text-[#954459]">Parash Kumar</p>
             <p className="text-xs font-semibold text-[#1F1B15]">Student Coordinator (Section B)</p>
             <p className="text-[11px] text-[#867275]">IT 1st Year • Roll: 2511132</p>
-=======
             <p className="font-['Caveat'] text-2xl text-[#954459]">Kaya</p>
             <p className="text-xs font-semibold text-[#1F1B15]">Student Coordinator</p>
             <p className="text-[11px] text-[#867275]">ME 1st Year • Roll: 2511101</p>
@@ -134,7 +132,6 @@ export const TransparencyView: React.FC<TransparencyViewProps> = ({ totalCollect
             <p className="font-['Caveat'] text-2xl text-[#954459]">Ankit</p>
             <p className="text-xs font-semibold text-[#1F1B15]">Student Coordinator</p>
             <p className="text-[11px] text-[#867275]">ME 1st Year • Roll: 2511132</p>
->>>>>>> 3868df1 (Update website and add flower favicon)
           </div>
         </div>
       </div>
